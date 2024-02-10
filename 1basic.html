@@ -1,24 +1,28 @@
-<!doctype HTML>
+<!DOCTYPE html>
 <html>
+<head>
 <script src="js/aframe.min.js"></script>
 <script src="js/aframe-ar.js"></script>
+</head>
 <body style="margin: 0px; overflow: hidden;">
-    <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+<a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
 
-<!--glucose-->
-    <a-assets><a-asset-item id="glucose" src="model/glucose.gltf"></a-asset-item></a-assets>
-    <a-marker-camera type="pattern" url="model/patt/pattern-marker.patt">
-        <a-entity position="0 0 0" rotation="0 0 0" scale="0.10 0.10 0.10" gltf-model="#glucose"></a-entity>
-    </a-marker>
-        
-<!--tree-->
-    <a-assets><a-asset-item id="tree" src="model/tree.gltf"></a-asset-item></a-assets>
-    <a-marker type="pattern" url="model/patt/pattern-glucose.patt">
-        <a-entity position="0 0 0" rotation="0 0 0" scale="0.10 0.10 0.10" gltf-model="#tree"></a-entity>
-    </a-marker>
+  <!-- Glucose -->
+  <a-assets>
+    <a-asset-item id="glucose" src="model/glucose.gltf"></a-asset-item>
+    <a-asset-item id="tree" src="model/tree.gltf"></a-asset-item>
+  </a-assets>
 
-        <a-entity camera></a-entity>
-    </a-scene>
+  <a-marker type="pattern" url="model/patt/pattern-marker.patt">
+    <a-entity position="0 0 0" rotation="0 0 0" scale="0.10 0.10 0.10" gltf-model="#glucose"></a-entity>
+  </a-marker>
+
+  <!-- Tree -->
+  <a-marker type="pattern" url="model/patt/pattern-glucose.patt">
+    <a-entity position="0 0 0" rotation="0 0 0" scale="0.10 0.10 0.10" gltf-model="#tree"></a-entity>
+  </a-marker>
+
+<a-entity camera></a-entity>
+</a-scene>
 </body>
 </html>
-<!--<a-box position="0 0.5 0" material="color: red; transparent: true; opacity: 0.50;"></a-box>-->
