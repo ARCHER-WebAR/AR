@@ -3,43 +3,28 @@
 <script src="js/aframe.min.js"></script>
 <script src="js/aframe-ar.js"></script>
 <body style="margin: 0px; overflow: hidden;">
-<a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+    <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
 
-	
-    <a-assets>
-        <a-asset-item id="tree" src="model/tree.gltf"></a-asset-item>
-	</a-assets>
+<!--tree-->
+    <a-assets><a-asset-item id="tree" src="model/tree.gltf"></a-asset-item></a-assets>
     <a-marker type="pattern" url="model/patt/kanji.patt">
-        <a-entity   position="0 0 0" 
-                    rotation="0 0 0"
-                    scale="0.10 0.10 0.10"
-                    gltf-model="#tree" >
-        </a-entity>
+        <a-entity position="0 0 0" rotation="0 0 0" scale="0.10 0.10 0.10" gltf-model="#tree"></a-entity>
     </a-marker>
 
-	
+<!--earth-->
     <a-assets>
-		<img id="grid" src="model/border.png" />
-		<img id="earth-flat" src="model/earth-flat.jpg" />
-		<img id="earth-sphere" src="model/earth-sphere.jpg" />
-	</a-assets>
+        <img id="grid" src="model/border.png" />
+        <img id="earth-flat" src="model/earth-flat.jpg" />
+        <img id="earth-sphere" src="model/earth-sphere.jpg" />
+    </a-assets>
 
-	
+<!--box-->
     <a-marker type="pattern" url="model/patt/pattern-marker.patt">
-        <a-box position="0 0.5 0" 
-               material="color: red; transparent: true; opacity: 0.50;">
+        <a-box position="0 0.5 0" material="color: red; transparent: true; opacity: 0.50;">
         </a-box>
     </a-marker>
 
-	
-    <a-marker type="barcode" value="0">
-        <a-box position="0 0.5 0" 
-               material="src: #grid; color: yellow; transparent: true; opacity: 0.50;">
-        </a-box>
-    </a-marker>
-
-	
-    <a-entity camera></a-entity>
-</a-scene>
+        <a-entity camera></a-entity>
+    </a-scene>
 </body>
 </html>
