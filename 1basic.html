@@ -10,6 +10,12 @@
     <a-marker-camera type="pattern" url="model/patt/pattern-marker.patt">
         <a-entity position="0 0 0" rotation="0 0 0" scale="0.10 0.10 0.10" gltf-model="#glucose"></a-entity>
     </a-marker>
+
+<!--tree-->
+    <a-assets><a-asset-item id="tree" src="model/tree.gltf"></a-asset-item></a-assets>
+    <a-marker-camera type="pattern" patternUrl="model/patt/pattern-glucose.patt">
+        <a-entity position="0 0 0" rotation="0 0 0" scale="0.10 0.10 0.10" gltf-model="#tree"></a-entity>
+    </a-marker-camera>
         
 <!--tree-->
     <a-assets><a-asset-item id="tree" src="model/tree.gltf"></a-asset-item></a-assets>
@@ -17,6 +23,10 @@
         <a-entity position="0 0 0" rotation="0 0 0" scale="0.10 0.10 0.10" gltf-model="#tree"></a-entity>
     </a-marker>
 
+<!--box-->
+    <a-marker-camera type="pattern" patternUrl="model/patt/pattern-marker.patt">
+        <a-box position="0 0.5 0" material="color: red; transparent: true; opacity: 0.50;"></a-box>
+    </a-marker-camera>
 <!--box-->
     <a-marker type="pattern" url="model/patt/pattern-marker.patt">
         <a-box position="0 0.5 0" material="color: red; transparent: true; opacity: 0.50;"></a-box>
