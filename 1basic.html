@@ -5,9 +5,9 @@
 <body style="margin: 0px; overflow: hidden;">
     <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
 
-<!--tree-->
+<!--glucose-->
     <a-assets><a-asset-item id="glucose" src="model/glucose.gltf"></a-asset-item></a-assets>
-    <a-marker type="pattern" url="model/patt/pattern-marker.patt">
+    <a-marker-camera type="pattern" url="model/patt/pattern-marker.patt">
         <a-entity position="0 0 0" rotation="0 0 0" scale="0.10 0.10 0.10" gltf-model="#glucose"></a-entity>
     </a-marker>
         
@@ -18,8 +18,12 @@
     </a-marker>
 
 <!--box-->
-    <a-marker type="pattern" url="model/patt/pattern-glucose.patt">
+    <a-marker type="pattern" url="model/patt/pattern-marker.patt">
         <a-box position="0 0.5 0" material="color: red; transparent: true; opacity: 0.50;"></a-box>
+    </a-marker>
+<!--box-->
+    <a-marker type="pattern" url="model/patt/kanji.patt">
+        <a-box position="0 0.5 0" material="color: blue; transparent: true; opacity: 0.50;"></a-box>
     </a-marker>
 
         <a-entity camera></a-entity>
