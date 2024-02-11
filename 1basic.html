@@ -7,18 +7,18 @@
 <body style="margin: 0px; overflow: hidden;">
 <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
 
-  <!-- 3D models -->
+  <!-- Asset Loading -->
   <a-assets>
     <a-asset-item id="glucose" src="model/glucose.gltf"></a-asset-item>
     <a-asset-item id="tree" src="model/tree.gltf"></a-asset-item>
   </a-assets>
 
-  <!-- tree -->
+  <!-- Marker for Tree -->
   <a-marker type="pattern" url="model/patt/kanji.patt">
     <a-entity position="0 0 0" rotation="0 0 0" scale="0.10 0.10 0.10" gltf-model="#tree"></a-entity>
   </a-marker>
   
-  <!-- glucose -->
+  <!-- Marker for Glucose -->
   <a-marker type="pattern" url="model/patt/pattern-glucose.patt">
     <a-entity position="0 0 0" rotation="0 0 0" scale="0.02 0.02 0.02" gltf-model="#glucose"></a-entity>
   </a-marker>
