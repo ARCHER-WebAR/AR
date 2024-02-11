@@ -1,32 +1,42 @@
-<!doctype HTML>
+<!DOCTYPE html>
 <html>
+<head>
 <script src="js/aframe.min.js"></script>
 <script src="js/aframe-ar.js"></script>
+</head>
 <body style="margin: 0px; overflow: hidden;">
-
 <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
 
-    <a-assets>
-        <canvas id="myCanvas"></canvas>
-	</a-assets>
-    
-    <a-marker type="pattern" url="model/patt/kanji.patt">
-        <a-box
-               position="0 0.5 0" 
-               material="color: red; transparent: true; opacity: 0.95;"
-               >
-        </a-box>
-    </a-marker>
-    
-    <a-entity camera></a-entity>
-    
+  <!-- 3D models -->
+  <a-assets>
+    <a-asset-item id="glucose" src="model/glucose.gltf"></a-asset-item>
+    <a-asset-item id="tree" src="model/tree.gltf"></a-asset-item>
+    <a-asset-item id="starch" src="model/starch.gltf"></a-asset-item>
+    <a-asset-item id="peptide" src="model/peptide.gltf"></a-asset-item>
+
+  </a-assets>
+
+  <!-- test: tree -->
+  <a-marker type="pattern" url="model/patt/kanji.patt">
+    <a-entity position="0 0 0" rotation="0 0 0" scale="0.10 0.10 0.10" gltf-model="#tree"></a-entity>
+  </a-marker>
+  
+  <!-- sci: glucose -->
+  <a-marker type="pattern" url="model/patt/pattern-glucose.patt">
+    <a-entity position="0 0 0" rotation="0 0 0" scale="0.015 0.015 0.015" gltf-model="#glucose"></a-entity>
+  </a-marker>
+
+  <!-- sci: starch -->
+  <a-marker type="pattern" url="model/patt/pattern-starch.patt">
+    <a-entity position="0 0 0" rotation="0 0 0" scale="0.015 0.015 0.015" gltf-model="#starch"></a-entity>
+  </a-marker>
+
+  <!-- sci: peptide -->
+  <a-marker type="pattern" url="model/patt/pattern-peptide.patt">
+    <a-entity position="0 0 0" rotation="0 0 0" scale="0.015 0.015 0.015" gltf-model="#peptide"></a-entity>
+  </a-marker>
+
+<a-entity camera></a-entity>
 </a-scene>
 </body>
 </html>
-
-
-    <!-- animation
-    for more info, see: https://aframe.io/docs/1.0.0/components/animation.html 
-    for more examples:  https://stemkoski.github.io/A-Frame-Examples/animation.html
-    -->
-    
