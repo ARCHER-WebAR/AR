@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/aframe.min.js"></script>
+<script src="js/aframe-ar.js"></script>
+</head>
+<body style="margin: 0px; overflow: hidden;">
+<a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+
+  <!-- 3D models -->
+  <a-assets>
+    <a-asset-item id="smallservo" src="model/smallservo.gltf"></a-asset-item>
+    <a-asset-item id="wheel" src="model/wheel.gltf"></a-asset-item>
+    <a-asset-item id="motor" src="model/motor.gltf"></a-asset-item>
+  </a-assets>
+
+  <!-- test: smallservo -->
+  <a-marker type="pattern" url="model/patt/smallservo.patt">
+    <a-entity position="0 0 0" rotation="0 0 0" scale="0.10 0.10 0.10" gltf-model="#smallservo"></a-entity>
+  </a-marker>
+  
+  <!-- sci: wheel -->
+  <a-marker type="pattern" url="model/patt/pattern-wheel.patt">
+    <a-entity position="0 0 0" rotation="0 0 0" scale="0.015 0.015 0.015" gltf-model="#wheel"></a-entity>
+  </a-marker>
+
+  <!-- sci: motor -->
+  <a-marker type="pattern" url="model/patt/pattern-motor.patt">
+    <a-entity position="0 0 0" rotation="0 0 0" scale="0.015 0.015 0.015" gltf-model="#motor"></a-entity>
+  </a-marker>
+  
+<a-entity camera></a-entity>
+</a-scene>
+</body>
+</html>
