@@ -10,17 +10,17 @@
   <!-- 3D models -->
   <a-assets>
     <a-asset-item id="nucleotide" src="model/nucleotide.gltf"></a-asset-item>
-    <a-asset-item id="phospholipidbilayer" src="B-DNA_ribbon_backbone__sticks_bases.gltf"></a-asset-item>
+    <a-asset-item id="bases" src="model/bases.gltf"></a-asset-item>
   </a-assets>
   
     <!-- sci: nucleotide -->
-  <a-marker type="pattern" url="model/patt/pattern-nucleotide.patt">
+  <a-marker type="pattern" url="model/patt/pattern-dna.patt">
     <a-entity position="0 0 0" rotation="0 0 0" scale="0.015 0.015 0.015" gltf-model="#nucleotide"></a-entity>
   </a-marker>
 
   <!-- sci: phospholipid bilayer -->
   <a-marker type="pattern" url="model/patt/pattern-phospholipidbilayer.patt">
-    <a-entity position="0 0 0" rotation="0 0 0" scale="0.015 0.015 0.015" gltf-model="#phospholipidbilayer"></a-entity>
+    <a-entity position="0 0 0" rotation="0 0 0" scale="0.015 0.015 0.015" gltf-model="#bases"></a-entity>
   </a-marker>
 
 <a-entity camera></a-entity>
